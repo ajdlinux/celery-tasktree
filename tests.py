@@ -6,7 +6,7 @@ How to run these tests.
 1. Install celery, then copy ``celeryconfig.py.example`` to ``celeryconfig.py``
 and tune the configuration file. Follow celery "getting started" guide:
 http://docs.celeryproject.org/en/latest/getting-started/index.html
-2. Launch celeryd as ``celeryd --loglevel=INFO``.
+2. Launch the celery worker with ``celery worker --loglevel=INFO``.
 Make sure that tasks "test_tasks.mkdir" and "test_tasks.MkdirTask" are found.
 3. Run tests with ``nosetests`` command.
 

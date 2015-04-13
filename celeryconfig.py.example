@@ -2,12 +2,8 @@
 #
 # Rename this file to celeryconfig.py
 # Command for test:
-# celeryd --loglevel=INFO
-BROKER_HOST = 'localhost'
-BROKER_PORT = 5672
-BROKER_USER = 'myuser'
-BROKER_PASSWORD = 'mypassword'
-BROKER_VHOST = 'myvhost'
+# celery worker --loglevel=INFO
+BROKER_URL = 'amqp://myuser:mypassword@localhost:5672//'
 CELERY_IMPORTS = ("test_tasks", )
 CELERY_RESULT_BACKEND = "amqp"
 CELERY_AMQP_TASK_RESULT_EXPIRES = 1000
